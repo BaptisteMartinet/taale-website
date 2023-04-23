@@ -1,19 +1,28 @@
 import * as React from 'react';
 import { styled } from '@mui/material';
-import { Link } from 'gatsby';
+import { Link as GatsbyLink } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const StyledHeader = styled('header')({
+  position: 'fixed',
+  zIndex: 1,
   width: '100%',
-  height: '64px',
+  height: '96px',
+  padding: '1rem',
   display: 'flex',
-  justifyContent: 'space-evenly'
+  justifyContent: 'space-evenly',
 });
 
 const Navigation = styled('ul')({
   listStyle: 'none',
   display: 'flex',
-  columnGap: '1rem',
+  columnGap: '3rem',
+});
+
+const Link = styled(GatsbyLink)({
+  fontWeight: 500,
+  fontSize: '1.5rem',
+  color: '#141414',
 });
 
 const Header = () => {
@@ -23,6 +32,7 @@ const Header = () => {
         src="../../images/logo-full.png"
         alt="Logo"
         placeholder="blurred"
+        width={128}
         height={64}
       />
       <nav>
