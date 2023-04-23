@@ -28,16 +28,18 @@ const Link = styled(GatsbyLink)({
 const Header = () => {
   return (
     <StyledHeader>
-      <StaticImage
-        src="../../images/logo-full.png"
-        alt="Logo"
-        placeholder="blurred"
-        width={128}
-        height={64}
-      />
+      <GatsbyLink to="/">
+        <StaticImage
+          src="../../images/logo-full.png"
+          alt="Logo"
+          placeholder="blurred"
+          width={128}
+          height={64}
+        />
+      </GatsbyLink>
       <nav>
         <Navigation>
-          <Link to="/">Home</Link>
+          <Link to="/blog">Blog</Link>
           <Link to="/about">About</Link>
           <Link to="/help">Help</Link>
         </Navigation>
